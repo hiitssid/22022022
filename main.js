@@ -193,8 +193,10 @@ for (let in student1) {
 }
 */
 
+/*
 const salaries = {
-  Ram: 1000,
+  //object decleration = salaries
+  Ram: 1000, // property : value
   Shyam: 2000,
   Hari: 3000,
   Sita: 4000,
@@ -202,8 +204,151 @@ const salaries = {
 };
 let sum = 0;
 for (let key in salaries) {
-  console.log(key, salaries[key]);
-  // sum = sum + salaries[key];
-  sum += salaries[key];
+  //use of for..in loop
+  console.log(key, salaries[key]); //key prints the property name i.e. Ram, Shyam....& salaries[key] prints values like 1000, 2000...
+  // sum = sum + salaries[key];         //sum of all salaries
+  sum += salaries[key]; //sum of all salaries
 }
 console.log(sum);
+
+console.log(Object.values(salaries)); //prints salaries in a set of arrays
+for (let val of Object.values(salaries)) {
+  //use of for..of loop
+  sum += val; //adding all salaries
+}
+console.log(sum);
+*/
+
+//-----------Object Destructing:--------------
+/*
+const user = {
+  name: "Ram",
+  age: 20,
+  favBook: {
+    bookName: "Skill It",
+    bookAuthor: "Harry",
+  },
+};
+console.log(user.name, user.age, user.favBook);
+//object destruction exercies 1
+const { name, age, favBook } = user;
+console.log(name, age, favBook);
+
+//object destruction exercies 2
+const { bookName, bookAuthor } = favBook;
+console.log(bookName, bookAuthor);
+//---------End---------------------------------- 
+*/
+
+//----------------------------FUNCTION----------------------------
+
+/*
+function printf() {
+  let message = "Hi my name is Mark";
+  console.log(message);
+}
+printf();
+
+function printg(name, age, gender, location) {
+  let message = `Hi my name is ${name}. Just celebrated my ${age} birthday. I am ${gender}, living in ${location}`;
+  console.log(message);
+}
+printg("Mark", 40, "male", "South Delhi");
+//---------------------------------
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3));
+//---------------------------------
+function calcMult(x, y) {
+  let multiply = x * y;
+  return multiply;
+}
+let result = calcMult(2, 3);
+console.log(result);
+
+//-------------FUNCTION EXPRESSION-------------------
+let calcAdd = function (numb1, numb2) {
+  let add = numb1 + numb2;
+  return add;
+};
+console.log(calcAdd(2, 3));
+
+*/
+/*
+let calcSubtraction = function (s, t) {
+  let subtraction = s - t;
+  return subtraction;
+};
+console.log(calcSubtraction(9, 4));
+
+//--------------ARROW FUNCTION-----------------
+const calcDivide = (j, k) => j / k;
+console.log(calcDivide(100, 2));
+
+const calculate = (xx, yy) => xx * yy;
+console.log(calculate(100, 200));
+//---------------------------------------------
+*/
+
+/*--------------ADD AN ARRAY------FOR LOOP-------
+let numbx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+let sum = 0;
+for (let i = 0; i < numbx.length; i++) {
+  sum += numbx[i];
+}
+console.log(sum);
+*/
+
+//----------------REST PARAMETER---------------
+
+/*---------------------------------------------
+function multiply(...xyz) {
+  let multiplication = 1;
+  for (let num of xyz) {
+    multiplication = multiplication * num;
+  }
+  return multiplication;
+}
+console.log(multiply(2, 3, 4, 5));
+
+let numbb = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+for (num of numbb) {
+  console.log(num);
+}
+-----------------------------------------------*/
+/*
+let sum = 0;
+function as(...args) {
+  for (let item of args) {
+    sum = sum + item;
+  }
+  return sum;
+}
+console.log(as(1, 2, 3, 4, 5, 6, 7, 8, 9));
+*/
+//-------------------------ARRAYS----------------------------------
+/*let gods = ["shiva", "ram", "bishnu", "bramha", "krishna"];
+console.log(gods);
+console.log(gods[0]);
+console.log(gods[1]);
+console.log(gods.length);
+*/
+const numberr = [3, 4, 5, 8, 9];
+console.log(numberr);
+numberr.unshift(1, 2); //add from start
+console.log(numberr);
+numberr.push(10, 11); //add from end
+console.log(numberr);
+numberr.splice(5, 0, 6, 7); //add from middle
+console.log(numberr);
+numberr.shift(); //remove one by one from start
+console.log(numberr);
+numberr.shift(); //remove one by one from start
+console.log(numberr);
+numberr.pop(); //remove one by one from end
+console.log(numberr);
+numberr.pop(); //remove one by one from end
+console.log(numberr);
+numberr.splice(2, 2); //delete number from middle
+console.log(numberr);
