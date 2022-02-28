@@ -334,6 +334,7 @@ console.log(gods[0]);
 console.log(gods[1]);
 console.log(gods.length);
 */
+/*
 const numberr = [3, 4, 5, 8, 9];
 console.log(numberr);
 numberr.unshift(1, 2); //add from start
@@ -352,3 +353,167 @@ numberr.pop(); //remove one by one from end
 console.log(numberr);
 numberr.splice(2, 2); //delete number from middle
 console.log(numberr);
+*/
+//------------FINDING ELEMENTS IN ARRAY--------------------------
+/*
+const arr = [1, 2, 3, 2, 1, 4, 5, 4];
+console.log(arr);
+console.log(arr.includes(2));
+console.log(arr.indexOf(2));
+console.log(arr.lastIndexOf(2));
+*/
+
+//---------------------FINDING OBJECT IN ARRAY-----------------
+/*
+const doctor = [
+  { name: "Kazi", age: 21 },
+  { name: "Jack", age: 25 },
+  { name: "Ram", age: 30 },
+];
+const result = doctor.find(function (doctor) {
+  return doctor.name === "Jack";
+});
+console.log(result);
+/*
+//------------------ITERATING AN ARRAY------------------------
+/*
+const arra = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+for (i = 0; i < arra.length; i++) {
+  console.log(i, arra[i]);
+}
+for (let key of arra) {
+  console.log(key);
+}
+
+arra.forEach(function (key, index) {
+  console.log(index, key);
+});
+*/
+
+//------------------SORTING & REVERSING AN ARRAY------------------
+/*
+const ar1 = [7, 3, 5, 8, 9, 0, 2, 1, 6, 4];
+ar1.sort(); //sort array
+console.log(ar1);
+ar1.reverse(); //reverese array
+console.log(ar1);
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const data = arr.every(function (key) {
+  return key > 0;
+});
+console.log(data);
+
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const data2 = arr2.some(function (key) {
+  return key > 10;
+});
+console.log(data2);
+*/
+
+/*
+//-----------------------ARRAY CONCAT-------------
+const num1 = [0, 1, 2, 3];
+const num2 = [4, 5, 6, 7, 8, 9];
+let concatNum = num1.concat(num2);
+console.log(concatNum); //[0,1,2,3,4,5,6,7,8,9]
+
+//-----------------------ARRAY SLICE--------------
+let sliceNum = concatNum.slice(0, -1); //[0,1,2,3,4,5,6,7,8,]
+console.log(sliceNum);
+
+sliceNum = concatNum.slice(0, 4); // [0,1,2,3]
+console.log(sliceNum);
+
+sliceNum = concatNum.slice(5, 7);
+console.log(sliceNum); //[5,6]
+*/
+/*
+//--------------------SPREAD OPERATOR-------------
+const num = [1, 2, 3, 4, 5];
+console.log(...num); //1 2 3 4 5
+const num2 = [6, 7, 8, 9, 0];
+const numt = [...num, ...num2];
+console.log(numt); // [1,2,3,4,5,6,7,8,9,0]
+console.log(numt.join("-"));
+//---------------------SPLIT---------------------
+let mes = "hi my name is mark";
+let ram = mes.split(" ");
+console.log(ram);
+//-----------------------JOIN---------------------
+let join = ram.join(" ");
+console.log(join);
+*/
+//-------------------------MAP-----------------
+/*
+let number1 = [1, 2, 3, 4, 5];
+let map1 = number1.map((x) => x * 2);
+console.log(map1);
+//------------------------ARRAY FILTER------------
+let array3 = ["ram", "shyam", "devendra", "hari", "om", "omkar", "kokila"];
+let result3 = array3.filter((array3) => array3.length > 4);
+console.log(result3);
+
+let array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let oddNum = array4.filter((key) => key % 2 == 1);
+let evenNum = array4.filter((key) => key % 2 == 0);
+console.log(oddNum);
+console.log(evenNum);
+*/
+//-----------------------REDUCE-------------------------
+/*
+let numbe = [10, 20, 30];
+let sum = 0;
+let sumReduce = numbe.reduce((sum, key) => sum + key, 0);
+console.log(sumReduce); //60
+*/
+//----------------------ARRAY DESTRUCTURING-----------
+
+/*let [a, b, c, d, e, f, g] = [1, 2, 3, 4, 5, 6, 7];
+console.log(a, g); //1, 7
+*/
+//----------------------OBJECT DESTRUCTURING-------------
+/*
+let user = {
+  name: "Ram",
+  age: 20,
+  address: {
+    long: 18.22,
+    lat: 20.11,
+  },
+};
+function greeting(user) {
+  let { name, age, address } = user;
+  let { long, lat } = address;
+  console.log(`Hi I am ${name}, I am ${age}, my address is ${lat} , ${long}`);
+}
+greeting(user);
+*/
+//-----------------------------DATA STRUCTURE : SET ----------------
+/*
+let set = new Set();
+set.add(100);
+set.add(200);
+set.add(300);
+set.add(400);
+set.add(200);
+console.log(set); //[100, 200, 300, 400]
+console.log(set.size); //4
+set.forEach((el) => console.log(el)); //100 200 300 400
+*/
+//---------------------------DATA STRUCTURE : MAP --------------------
+/*
+let map = new Map();
+map.set("Mango", "Aap");
+map.set("Banana", "Kera");
+map.set("Apple", "Shyau");
+console.log(map);
+for (let el of map) {
+  console.log(el);
+}
+console.log(map.has("Mango"));
+map.delete("Apple");
+console.log(map);
+console.log(map.keys());
+console.log(map.values());
+*/
